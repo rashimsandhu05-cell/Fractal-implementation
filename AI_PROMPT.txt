@@ -1,0 +1,42 @@
+COMP3710 — LAB DEMONSTRATION 1, PART 3
+AI PROMPT SUMMARY
+
+Chosen fractal: Sierpiński Triangle
+
+The following is a concise, original summary of the AI assistance requested for
+the Part 3 fractal implementation. It records the purpose of each request rather
+than reproducing a full chat transcript.
+
+1. Fractal selection and approach
+   I asked for help choosing a fractal that demonstrates self-similarity and can
+   be implemented clearly in Python. The Sierpiński triangle was selected because
+   each triangle is repeatedly divided into three smaller triangles.
+
+2. Recursive construction
+   I asked how to express the Sierpiński rule as a recursive function. The advice
+   was to stop at a specified depth and otherwise call the same function for the
+   three corner sub-triangles.
+
+3. Geometry calculations
+   I asked how to find the vertices of the smaller triangles. The suggested
+   method was to calculate the midpoint of each edge by averaging the x and y
+   coordinates of its two endpoints.
+
+4. Rendering the result
+   I asked for guidance on drawing a filled triangle from three coordinate pairs.
+   The implementation uses Python's turtle module to move between vertices, close
+   the shape, and apply a fill colour.
+
+5. Presentation and parameters
+   I asked how to make the output easier to inspect. The notebook sets a white
+   drawing background, hides the Turtle cursor, uses a colour cycle for recursion
+   levels, and stores the recursion depth in a variable so it can be adjusted.
+
+6. Review of the implementation
+   I asked for a review of the completed notebook. The review confirmed that the
+   three recursive calls represent the top, lower-left, and lower-right triangles,
+   and noted that Turtle graphics need a graphical desktop environment to display
+   correctly.
+
+I used the AI responses as guidance, checked the resulting code, and retained
+responsibility for understanding and submitting the final implementation.
