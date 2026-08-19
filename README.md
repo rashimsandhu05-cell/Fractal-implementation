@@ -1,53 +1,53 @@
 # Fractal Implementation — Sierpiński Triangle
 
-A Python implementation of the **Sierpiński triangle**, a fractal made from a
-triangle that is repeatedly divided into three smaller triangles. The project
-uses recursion and Python's built-in `turtle` graphics module to render the
-pattern.
+A Python implementation of the **Sierpiński Triangle**, a fractal that demonstrates self-similarity through repeated subdivision of a triangle.
+
+This project contains two implementations of the fractal:
+
+1. A recursive implementation using Python's built-in `turtle` graphics module.
+2. A PyTorch implementation that uses vectorised tensor operations to calculate the fractal across a two-dimensional grid.
+
+---
 
 ## Files
 
-- `fractal.ipynb` — the main notebook containing the implementation.
-- `Sierpiński Triangle.ipynb` — a placeholder notebook for related work.
-- `AI_PROMPT.txt` — a summary of AI prompts used for the COMP3710 Part 3 work.
+- `fractal.ipynb` — Recursive Sierpiński Triangle implementation using Turtle.
+- `sierpinski_pytorch.ipynb` — PyTorch implementation using tensor operations and hardware acceleration where available.
+- `AI_PROMPT.txt` — Summary of AI assistance used during development.
+- `README.md` — Project documentation.
 
-## How it works
+---
 
-The notebook defines three main functions:
+## 1. Recursive Turtle Implementation
 
-- `draw_triangle(points, colour)` draws and fills a triangle using three points.
-- `midpoint(point1, point2)` calculates the centre point of an edge.
-- `sierpinski(points, degree)` recursively draws the three smaller triangles
-  that form each level of the fractal.
+The `fractal.ipynb` notebook demonstrates the geometric construction of the Sierpiński Triangle using recursion.
 
-The starting triangle has vertices at `(-300, -250)`, `(0, 300)`, and
-`(300, -250)`. The recursion depth is set by the `degree` variable, which is
-currently `5`.
+The implementation contains three main functions:
 
-## Requirements
+### `draw_triangle(points, colour)`
 
-- Python 3
-- A desktop environment that supports Tk/Turtle graphics
-- Jupyter Notebook or Visual Studio Code with Jupyter support
+Draws and fills a triangle using three coordinate points.
 
-No third-party Python packages are required.
+### `midpoint(point1, point2)`
 
-## Running the project
+Calculates the midpoint between two points by averaging their x and y coordinates.
 
-1. Open `fractal.ipynb` in Jupyter Notebook or VS Code.
-2. Run the code cell.
-3. A Turtle graphics window will open and draw the Sierpiński triangle.
+### `sierpinski(points, degree)`
 
-To change the amount of detail, edit the following line in the notebook:
+Recursively divides the original triangle into three smaller corner triangles.
+
+For each recursion level:
+
+1. The current triangle is drawn.
+2. Midpoints of the edges are calculated.
+3. Three smaller triangles are created:
+   - top
+   - bottom-left
+   - bottom-right
+4. The function calls itself for each smaller triangle.
+5. The recursion stops when `degree` reaches zero.
+
+The recursion depth can be changed using:
 
 ```python
 degree = 5
-```
-
-Larger values create more detail but require more drawing time. For example,
-`degree = 6` creates 729 smallest triangles.
-
-## Notes
-
-The Turtle window needs a graphical desktop session. It may not open when the
-notebook is run on a headless server or in some browser-only notebook services.
