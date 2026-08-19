@@ -37,6 +37,16 @@ than reproducing a full chat transcript.
    three recursive calls represent the top, lower-left, and lower-right triangles,
    and noted that Turtle graphics need a graphical desktop environment to display
    correctly.
+   
+7. PyTorch implementation and parallel computation
+
+I asked for help implementing the Sierpiński Triangle using PyTorch tensors.
+The purpose was to compute the fractal across a two-dimensional grid using
+vectorised tensor operations rather than evaluating one pixel at a time.
+
+The implementation creates coordinate tensors and applies the Sierpiński
+membership rule simultaneously across the grid. PyTorch performs these tensor
+operations in parallel on the selected device where supported.
 
 I used the AI responses as guidance, checked the resulting code, and retained
 responsibility for understanding and submitting the final implementation.
